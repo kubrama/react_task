@@ -6,6 +6,15 @@ import Card from "./components/Card/Card";
 import product1 from './assets/images/product1.jpg'
 import product2 from './assets/images/product2.jpg'
 import product3 from './assets/images/product3.jpg'
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import Shop from './pages/Shop';
+
+
+
+
 
 
 function App() {
@@ -17,22 +26,34 @@ function App() {
   ];
 
   return (
-    <div className="App">
-      <Header />
-
-      <div className="cards-container">
-        {cardsData.map((card, index) => (
-          <Card
-            key={index}
-            title={card.title}
-            description={card.description}
-            image={card.image}
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div className="cards-container">
+                {cardsData.map((card, index) => (
+                  <Card
+                    key={index}
+                    title={card.title}
+                    description={card.description}
+                    image={card.image}
+                  />
+                ))}
+              </div>
+            }
           />
-        ))}
-      </div>
-      <Footer />
+          <Route path="/" element={<Home/>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/shop" element={<Shop/>} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
 
-    </div>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
