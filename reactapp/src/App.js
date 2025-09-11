@@ -11,6 +11,8 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
+import Account from './pages/Account';
+
 
 
 function App() {
@@ -45,6 +47,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/shop" element={<Shop/>} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/account" element={<Account/>} />
+
         </Routes>
 
         <Footer />

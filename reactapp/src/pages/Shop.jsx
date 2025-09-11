@@ -3,7 +3,7 @@ import Card from "../components/Card/Card";
 import product1 from "../assets/images/product1.jpg";
 import product2 from "../assets/images/product2.jpg";
 import product3 from "../assets/images/product3.jpg";
-import ToDoList from "../components/ToDoList/ToDoList";
+
 
 const Shop = () => {
   const [cards, setCards] = useState([
@@ -45,10 +45,7 @@ const Shop = () => {
           />
         ))}
       </div>
-        <section className="shopping-list">
-        <h2 style={{ textAlign: "center" }}>My Shopping List</h2>
-        <ToDoList/>
-      </section>
+      
     </div>
   );
 };
