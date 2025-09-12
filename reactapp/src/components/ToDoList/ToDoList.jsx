@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FaTrash } from "react-icons/fa";
-
-import "./ToDoList.css";
+import styles from "./ToDoList.module.css";
 
 export default function ToDoList() {
     const [tasks, setTasks] = useState([]);
@@ -27,9 +26,9 @@ export default function ToDoList() {
     };
 
     return (
-        <div className="todo-container">
+        <div className={styles.todoContainer}>
 
-            <div className="todo-input">
+            <div className={styles.todoInput}>
                 <input
                     type="text"
                     placeholder="Enter a task..."
@@ -39,11 +38,11 @@ export default function ToDoList() {
                 <button onClick={addTask}>Add</button>
             </div>
 
-            <ul className="todo-list">
+            <ul className={styles.todoList}>
                 {tasks.map((task) => (
-                    <li key={task.id} className={task.completed ? "completed" : ""}>
+                    <li key={task.id} className={task.completed ? styles.completed : ""}>
                         <span onClick={() => toggleTask(task.id)}>{task.text}</span>
-                        <button className="delete-btn" onClick={() => deleteTask(task.id)}>
+                        <button className={styles.deleteBtn} onClick={() => deleteTask(task.id)}>
                             <FaTrash />
                         </button>
                     </li>

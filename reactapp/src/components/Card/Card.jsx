@@ -1,13 +1,13 @@
 import React from "react";
-import "./Card.css";
+import styles from"./Card.module.css";
 import Counter from "../Counter/Counter";
 
 export default function Card({ id, title, description, image, count, onIncrement, onDecrement, showCounter }) {
   return (
-    <div className="card">
-      <img src={image} alt={title} className="card-image" />
-      <h3 className="card-title">{title}</h3>
-      <p className="card-description">{description}</p>
+    <div className={styles.card}>
+      <img src={image} alt={title} className={styles.cardImage} />
+      <h3 className={styles.cardTitle}>{title}</h3>
+      <p className={styles.cardDescription}>{description}</p>
 
       {showCounter && (
         <Counter

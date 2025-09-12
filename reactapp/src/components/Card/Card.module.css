@@ -13,17 +13,17 @@
 
 }
 
-.card-image {
+.cardImage {
   width: 100%;
   border-radius: 8px;
 }
 
-.card-title {
+.cardTitle {
   margin-top: 12px;
   font-size: 18px;
 }
 
-.card-description {
+.cardDescription {
   font-size: 14px;
   color: #555;
   margin-bottom: 16px;
@@ -34,7 +34,7 @@
   font-size: 16px;
 }
 
-.counter-buttons button {
+.counterButtons button {
   font-size: 16px;
   padding: 6px 12px;
   margin: 0 5px;
@@ -47,7 +47,7 @@
   transition: all 0.3s;
 }
 
-.counter-buttons button:hover {
+.counterButtons button:hover {
   background-color: white;
   color:black;
   border: 1px solid black;
