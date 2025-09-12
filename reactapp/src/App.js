@@ -6,12 +6,13 @@ import Card from "./components/Card/Card";
 import product1 from './assets/images/product1.jpg'
 import product2 from './assets/images/product2.jpg'
 import product3 from './assets/images/product3.jpg'
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
 import Account from './pages/Account';
+import Users from './pages/Users';
 
 
 
@@ -43,12 +44,12 @@ function App() {
               </div>
             }
           />
-          <Route path="/" element={<Home/>} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/shop" element={<Shop/>} />
+          <Route path="/shop" element={<Shop />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/account" element={<Account/>} />
-
+          <Route path="/account" element={<Account />} />
+          <Route path="/users" element={<Users />} />
         </Routes>
 
         <Footer />
