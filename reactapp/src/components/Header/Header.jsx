@@ -18,6 +18,8 @@ const Header = () => {
           <NavLink to="/shop" onClick={() => setIsOpen(false)}>Shop</NavLink>
           <NavLink to="/about" onClick={() => setIsOpen(false)}>About</NavLink>
           <NavLink to="/contact" onClick={() => setIsOpen(false)}>Contact</NavLink>
+          <NavLink to="/blog" onClick={() => setIsOpen(false)}>Blog</NavLink>
+
         </nav>
       </div>
 

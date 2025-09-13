@@ -13,6 +13,8 @@ import Home from './pages/Home';
 import Shop from './pages/Shop';
 import Account from './pages/Account';
 import Users from './pages/Users';
+import Blog from './pages/Blog';
+
 
 
 
@@ -50,6 +52,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/account" element={<Account />} />
           <Route path="/users" element={<Users />} />
+          <Route path="/blog" element={<Blog/>} />
+
         </Routes>
 
         <Footer />
