@@ -6,3 +6,15 @@
   flex-wrap: wrap;        
   padding: 40px;
 }
+
+body, .light-theme {
+  background: #fff;
+  color: #000;
+}
+
+.dark-theme {
+  background: #121212;
+  color: grey;
+}
+
+

@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import logo from '../../assets/images/logo.png';
 import "../Header/Header.css";
 import { NavLink } from "react-router-dom";
+import { ThemeContext } from "../../context/ThemeContext";
+import { AuthContext } from "../../context/AuthContext";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { user, login, logout } = useContext(AuthContext);
 
   return (
     <header>
@@ -27,11 +31,25 @@ const Header = () => {
         <NavLink to="/account">My Account</NavLink>
       </div>
 
-     
+
       <div className={`burger ${isOpen ? "toggle" : ""}`} onClick={() => setIsOpen(!isOpen)}>
         <div></div>
         <div></div>
         <div></div>
+      </div>
+      <div className="controls">
+        <button onClick={toggleTheme}>
+          {theme === "light" ? "Dark Mode" : "Light Mode"}
+        </button>
+
+        {user ? (
+          <>
+            <span>Hi, {user.name}</span>
+            <button className='login' onClick={logout}>Logout</button>
+          </>
+        ) : (
+          <button className='login' onClick={() => login("Guest")}>Login</button>
+        )}
       </div>
     </header>
   );

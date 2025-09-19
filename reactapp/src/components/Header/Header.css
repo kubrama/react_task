@@ -90,4 +90,16 @@ header {
     transform: rotate(-45deg) translateY(-7px);
   }
 }
+.controls button:nth-child(1){
+ padding: 10px 20px;
+ border-radius: 30px;
+ cursor: pointer;
+}
+.login{
+  padding: 8px 12px;
+  background-color: grey;
+  margin-left: 20px;
+  border: none;
+  cursor: pointer;
+}
 

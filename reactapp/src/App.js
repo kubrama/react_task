@@ -14,6 +14,8 @@ import Shop from './pages/Shop';
 import Account from './pages/Account';
 import Users from './pages/Users';
 import Blog from './pages/Blog';
+import { ThemeProvider } from "./context/ThemeContext";
+import { AuthProvider } from "./context/AuthContext";
 
 
 
@@ -27,6 +29,8 @@ function App() {
   ];
 
   return (
+     <ThemeProvider>
+      <AuthProvider>
     <Router>
       <div className="App">
         <Header />
@@ -59,6 +63,8 @@ function App() {
         <Footer />
       </div>
     </Router>
+      </AuthProvider>
+    </ThemeProvider>
   );
 }
 
